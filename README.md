@@ -68,5 +68,5 @@ WARNING: You must have Tomcat and MySQL installed to run this project.
 To configure the database connection settings, modify the `db.properties` file located in `resources/db.properties`. After that, create a local Tomcat configuration in IntelliJ and run it to deploy the application. Once the application is up and running, you can access it at localhost:8080.
 
 To test the application, you can use the mock admin and user accounts with the credentials 
-- ADMIN (username: admin@gmail.com and password: 1234).
+- ADMIN (username: admin@gmail.com and password: 1234)
 - USER (username: user@gmail.com and password: 1234).
