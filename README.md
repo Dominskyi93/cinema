@@ -37,13 +37,13 @@ The database already has an injection:
 - `lib`: This package contains email and password validators with their annotations. These validators help to ensure that the data provided by the user is valid and meets the requirements of the application.
 - `model`: This package contains the models for the database. These models are used to represent data entities in the database and are used by the DAO to map database records to Java objects.
 - `security`: This package contains `CustomUserDetailsService` that implements the UserDetailsService interface. The CustomUserDetailsService class is used to find a user by their email and transform the user object into a UserDetails object, which is used by Spring Security for authentication and authorization.
-- `service`: This package contains the services that call the repositories and the Authentication class. These services are responsible for performing business logic and coordinating the interactions between the controllers and the DAO.
-  - `mapper`: This package contains mapper classes that convert model objects to DTO objects. These mappers help to simplify the conversion process between database records and Java objects.
+- `service`: This package contains the services that call the repositories and the `AuthenticationService` class. These services are responsible for performing business logic and coordinating the interactions between the controllers and the DAO.
+  - `mapper`: This package contains mapper classes that convert model objects to DTO objects. These mappers are used to convert between dto and model (and are not used for DB communication)
 - `util`: This package contains a utility class for date and time formatting.
 
 ## Security
 The project has a built-in security mechanism that ensures the protection of user confidential information and ride data. To use the service, you need to register and authorize.
-- Registration. To register for the service, you need to make a POST request to the following endpoint: POST `/registration` Where registration is the endpoint that handles registration requests. The request body should contain the following fields:
+- Registration. To register for the service, you need to make a POST request to the following endpoint: POST `/register` Where registration is the endpoint that handles registration requests. The request body should contain the following fields:
   - login: user's email address
   - password: password for logging into the system
   - repeatPassword: uses to confirm the password
